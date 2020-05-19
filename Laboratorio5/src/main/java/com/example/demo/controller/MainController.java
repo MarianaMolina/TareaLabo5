@@ -19,7 +19,7 @@ public class MainController {
 	private EstudianteDAO estudianteDAO;
 	
 	//Mostrar lista de Estudiantes
-	@RequestMapping ("/estudiante")
+	@RequestMapping ("/inicio")
 	public ModelAndView initMain() {
 		ModelAndView mav = new ModelAndView();
 		List<Estudiante> estudiantes = null;

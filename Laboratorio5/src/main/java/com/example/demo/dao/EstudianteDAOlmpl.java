@@ -7,9 +7,11 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Repository;
 
 import com.example.demo.domain.Estudiante;
 
+@Repository
 public class EstudianteDAOlmpl implements EstudianteDAO {
 	
 	@PersistenceContext(unitName="demo")

@@ -31,6 +31,28 @@ public class Estudiante {
 		
 	}
 	
+	
+	public Estudiante(String nombre, String apellido, String edad, Boolean estado) {
+		super();
+		Nombre = nombre;
+		Apellido = apellido;
+		Edad = edad;
+		Estado = estado;
+	}
+
+
+
+	public Estudiante(Integer codigoEstudiante, String nombre, String apellido, String edad, Boolean estado) {
+		super();
+		this.codigoEstudiante = codigoEstudiante;
+		Nombre = nombre;
+		Apellido = apellido;
+		Edad = edad;
+		Estado = estado;
+	}
+
+
+
 	//GETTERS Y SETTERS
 	
 	public Integer getCodigoEstudiante() {
