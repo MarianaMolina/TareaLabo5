@@ -41,6 +41,22 @@ public class MainController {
 		}
 		
 		else {
+			/*
+			List <Estudiante> estudiantes = null;
+			try {
+				mav.addObject("c_usuario", student.getC_usuario());
+				mav.addObject("nombre", student.getNombre());
+				mav.addObject("apellido", student.getApellido());
+				mav.addObject("carne", student.getCarne());
+				mav.addObject("carrera", student.getCarrera());
+				estudiantes.add(estudiante);
+				
+				estudiantes =  estudianteDAO.ingresar();
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+			*/
 			mav.setViewName("exito");
 		}
 		
