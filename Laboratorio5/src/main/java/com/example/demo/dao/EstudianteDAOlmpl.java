@@ -8,6 +8,7 @@ import javax.persistence.Query;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.domain.Estudiante;
 
@@ -26,11 +27,20 @@ public class EstudianteDAOlmpl implements EstudianteDAO {
 		List<Estudiante>result=query.getResultList();
 		return result;
 	}
+	
 
 	@Override
 	public Estudiante findOne(Integer code) throws DataAccessException {
 		Estudiante estudiante = entityManager.find(Estudiante.class, code);
 		return estudiante;
+	}
+
+
+	@Override
+	@Transactional
+	public void ingresar(Estudiante estudiante) throws DataAccessException {
+		entityManager.persist(estudiante);
+		
 	}
 	
 	

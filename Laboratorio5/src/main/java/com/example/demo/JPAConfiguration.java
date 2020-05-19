@@ -20,20 +20,17 @@ public class JPAConfiguration {
 		em.setDataSource(dataSource());
 		em.setPersistenceUnitName("demo");
 		em.setPackagesToScan("com.example.demo.domain");
-		
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		em.setJpaVendorAdapter(vendorAdapter);
 		em.setJpaProperties(hibernateProperties());
-	
 		return em;
 	}
-	
 	
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.postgresql.Driver");
-		dataSource.setUrl("jdbc:postgresql://127.0.0.1:5432//BDEscuela");
+		dataSource.setUrl("jdbc:postgresql:/127.0.0.1:5432/ESTUDIANTE");
 		dataSource.setUsername("postgres");
 		dataSource.setPassword("00046416");
 		return dataSource;

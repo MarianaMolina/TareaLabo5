@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ingresar estudiante</title>
+</head>
+<body bgcolor="#313684">
+	<h1><font color="white" face ="Arial" >INGRESAR ESTUDIANTE </font>  </h1>
+	
+	<section>
+		<form action="#" th:action="@{/formEstudiante}" th:object="${estudiante}" method="post">
+			<div>
+				<label for="nombre"><font color="white" face ="Arial" >Nombre: </font>  </label>
+				<input type="text" th:field="*{nombre}" id="nombre" required >
+				<span th:errors ="*{nombre}" style="color:#FF0000"></span>
+			</div>
+			
+			<br>
+			
+			<div>
+				<label for="apellido"> <font color="white" face ="Arial">Apellido: </font>  </label>
+				<input type="text" th:field="*{apellido}" id="apellido" required >
+				<span th:errors ="*{apellido}" style="color:#FF0000"></span>
+			</div>
+			
+			<br>
+			
+			<div>
+				<label for="carne"> <font color="white" face ="Arial"> Carne: </font>  </label>
+				<input type="text" th:field="*{carne}" id="carne" required>
+				<span th:errors ="*{carne}" style="color:#FF0000"></span>
+			</div>
+			
+			<br>
+			
+			<div>
+				<label for="carrera"> <font color="white" face ="Arial"> Carrera: </font> </label>
+				<input type="text" th:field="*{carrera}" id="carrera" required >
+				<span th:errors ="*{carrera}" style="color:#FF0000"></span>
+			</div>
+			
+			<br>
+			
+			<input type="submit" value="Agregar Alumno">  
+	
+		</form>
+		
+	</section>
+
+</body>
+</html>
